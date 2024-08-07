@@ -1,6 +1,6 @@
 # Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras
 <p align="center">
- <img src="resources/teaser.png" width="400"/>
+ <img src="resource/teaser.png" width="400"/>
 </p>
 
 Official code for **Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras** (ECCV2024)
@@ -88,7 +88,28 @@ The DSEC dataset should have the following format:
 ```
 
 ### DSEC Night-Point
-[Link](https://drive.google.com/drive/folders/1pZujDG-LYpwwJT3zAgmUepwP-_tFhjA-?usp=drive_link)
+The DSEC NIght dataset can be downloaded [DSEC](https://github.com/uzh-rpg/DSEC) and [CMDA](https://github.com/XiaRho/CMDA). The weak labels used by our works can be downloaded [Link](https://drive.google.com/drive/folders/1pZujDG-LYpwwJT3zAgmUepwP-_tFhjA-?usp=drive_link).
+
+```
+The DSEC Night dataset should have the following format:
+    ├── DSEC_Night              
+    │      ├── zurich_city_09_a
+    │      │   │   ├── events
+    │      │   │   │ 
+    │      │   │   ├── labels
+    │      │   │   │     ├── ~~~.png
+    │      │   │   │     └── ...
+    │      │   │   ├── labels_test
+    │      │   │   │     ├── ~~~.png
+    │      │   │   │     └── ...    
+    │      │   │   ├── warp_images
+    │      │   │   │     ├── 000000.png
+    │      │   │   │     └── ...    
+    │      │   │   └── timestamps.txt
+    │      └── ...
+```
+
+For the 'labels_test' directory, we used dense labels provided by [CMDA](https://github.com/XiaRho/CMDA) for testing purposes, while 'labels' refers to the weak labels that we provide.
 
 
 ## Training

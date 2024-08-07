@@ -1,6 +1,6 @@
 # Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras
 <p align="center">
- <img src="resources/teaser.png" alt="Transfer" width="400"/>
+ <img src="resources/teaser.png" width="400"/>
 </p>
 
 Official code for **Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras** (ECCV2024)
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 we used a pre-processed DDD17 dataset with semantic labels [here](https://download.ifi.uzh.ch/rpg/ESS/ddd17_seg.tar.gz). Please do not forget to cite [DDD17](https://sensors.ini.uzh.ch/news_page/DDD17.html) and [Ev-SegNet](https://github.com/Shathe/Ev-SegNet) if you are using the DDD17 with semantic labels.
 The weak labels used by our works can be downloaded [Link](https://drive.google.com/drive/folders/1xP-5F4Q5I6Vgi6ITeKHkzDXRtn-5Nkn0?usp=drive_link).
 
-
+'''
 The DDD17 dataset should have the following format:
     ├── ddd17                 
     │   ├── dir0               
@@ -54,7 +54,7 @@ The DDD17 dataset should have the following format:
     │   └── dir1
     │       ├── event.data.t
     │       └── ... 
-
+'''
 
 
 ### DSEC

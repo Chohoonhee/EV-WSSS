@@ -40,7 +40,7 @@ pip install -r requirements.txt
 we used a pre-processed DDD17 dataset with semantic labels [here](https://download.ifi.uzh.ch/rpg/ESS/ddd17_seg.tar.gz). Please do not forget to cite [DDD17](https://sensors.ini.uzh.ch/news_page/DDD17.html) and [Ev-SegNet](https://github.com/Shathe/Ev-SegNet) if you are using the DDD17 with semantic labels.
 The weak labels used by our works can be downloaded [Link](https://drive.google.com/drive/folders/1xP-5F4Q5I6Vgi6ITeKHkzDXRtn-5Nkn0?usp=drive_link).
 
-'''
+```
 The DDD17 dataset should have the following format:
     ├── ddd17                 
     │   ├── dir0               
@@ -54,8 +54,7 @@ The DDD17 dataset should have the following format:
     │   └── dir1
     │       ├── event.data.t
     │       └── ... 
-'''
-
+```
 
 ### DSEC
 The DSEC-Semantic dataset can be downloaded [here](https://dsec.ifi.uzh.ch/dsec-semantic/). Please do not forget to cite [DSEC](https://github.com/uzh-rpg/DSEC) and [ESS](https://github.com/uzh-rpg/ess) if you are using the DSEC with semantic labels.

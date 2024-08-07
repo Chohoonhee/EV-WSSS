@@ -112,6 +112,16 @@ The DSEC Night dataset should have the following format:
 For the 'labels_test' directory, we used dense labels provided by [CMDA](https://github.com/XiaRho/CMDA) for testing purposes, while 'labels' refers to the weak labels that we provide.
 
 
+
+Generating a voxel grid during the training process within the dataloader can lead to CPU overload. Therefore, for the DSEC dataset, we pre-generated and saved the voxel grids in advance.
+This can be done using the provided code in the processing directory with the following command:
+```bash
+python processing/voxel_generate.py --dataset_path $DSEC_DATASET_PATH$
+python processing/voxel_generate_night.py --dataset_path $DSEC_NIGHT_DATASET_PATH$
+```
+
+
+
 ## Training
 The settings for the training can be specified in `config/settings_XXXX.yaml`.
 

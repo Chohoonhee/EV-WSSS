@@ -60,7 +60,7 @@ The DDD17 dataset should have the following format:
 The DSEC-Semantic dataset can be downloaded [here](https://dsec.ifi.uzh.ch/dsec-semantic/). Please do not forget to cite [DSEC](https://github.com/uzh-rpg/DSEC) and [ESS](https://github.com/uzh-rpg/ess) if you are using the DSEC with semantic labels.
 The weak labels used by our works can be downloaded [Link](https://drive.google.com/drive/folders/1VuO1RSvN8bpGli0vSGoET_Md0kWW-fdO?usp=drive_link).
 
-
+```
 The DSEC dataset should have the following format:
     ├── DSEC_Semantic                 
     │   ├── train               
@@ -85,7 +85,7 @@ The DSEC dataset should have the following format:
     │       │        ├── left
     │       │        ├── 11classes
     │       └── ... 
-
+```
 
 ### DSEC Night-Point
 [Link](https://drive.google.com/drive/folders/1pZujDG-LYpwwJT3zAgmUepwP-_tFhjA-?usp=drive_link)
@@ -109,10 +109,14 @@ CUDA_VISIBLE_DEVICES=0 python train.py --settings_file config/settings_DSEC.yaml
 
 # Acknowledgement
 Several network architectures were adapted from:
+
 https://github.com/uzh-rpg/rpg_e2vid
+
 https://github.com/uzh-rpg/ess
 
 
 The DSEC data loader was adapted from:
+
 https://github.com/uzh-rpg/DSEC
+
 

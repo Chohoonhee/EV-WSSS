@@ -1,0 +1,69 @@
+dataset:
+  name_a: 'Cityscapes_gray'
+  name_b: 'DSEC_events_weak_aug_night'
+  DSEC_events_weak_aug_night:
+    dataset_path: '/ssd1/DSEC_Night_labels_warp_images_V1'
+    dataset_dense_path: '/ssd1/DSEC_Night_labels_warp_images_V1'
+    shape: [440, 640]
+    nr_events_data: 20
+    nr_events_files_per_data: None
+    fixed_duration: False
+    delta_t_per_data: 50
+    require_paired_data_train: True
+    require_paired_data_val: True
+    nr_events_window: 100000
+    event_representation: 'voxel_grid'
+    nr_temporal_bins: 5
+    separate_pol: False
+    normalize_event: False
+    short_mul: 5.0
+    random_crop: False
+    crop_size: [400, 600] 
+    ten_point: False
+  cityscapes_img:
+    dataset_path: '/ssd1/DSEC_Semantic'
+    shape: [440, 640]  # [200, 352] for DDD17, [440, 640] for DSEC
+    random_crop: False  # True for DDD17, False for DSEC
+    read_two_imgs: False
+    require_paired_data_train: False
+    require_paired_data_val: False
+task:
+  semseg_num_classes: 11 # 6 for DDD17, 11 for DSEC
+dir:
+  log: logs
+model:
+  model_name:  'dsec'
+  skip_connect_encoder: True
+  skip_connect_task: True
+  skip_connect_task_type: 'concat'
+  data_augmentation_train: True
+  train_on_event_labels: False # True for ESS supervised (events labels + frames labels), False for ESS UDA
+optim:
+  batch_size_a: 200
+  batch_size_b: 1
+  lr_front: 5e-4
+  lr_back: 5e-4
+  lr_cls: 1e-3
+  lr_decay: 1
+  num_epochs: 50
+  val_epoch_step: 3
+  weight_task_loss: 1
+  weight_cycle_pred_loss: 1
+  weight_cycle_emb_loss: 1
+  weight_cycle_task_loss: 1
+  task_loss: ['dice', 'cross_entropy']
+loss:
+  dual_thres: 0.5
+  sim_weight: 0.1
+checkpoint:
+  save_checkpoint: True
+  resume_training: False
+  load_pretrained_weights: False # True for loading pre-trained weights
+  resume_file: '/ssd5/scripts_new/logs/dual_final_night/checkpoints/best_epoch.pt'
+  pretrained_file: '/ssd5/scripts_new/logs/dual_final_night/checkpoints/best_epoch.pt'
+hardware:
+  # num_cpu_workers: {-1: auto, 0: main thread, >0: ...}
+  num_cpu_workers: 4
+  # gpu_device: [0,1] # [0 or 'cpu']
+  gpu_device: 0 # [0 or 'cpu']
+exp_name: 'debug'

@@ -1,4 +1,4 @@
-# Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras
+# Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras (ECCV2024)
 <p align="center">
  <img src="resource/teaser.png" width="100%"/>
 </p>

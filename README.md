@@ -8,7 +8,7 @@ Official code for **Finding Meaning in Points: Weakly Supervised Semantic Segmen
 
 
 ```bibtex
-@Article{Sun22eccv,
+@Article{cho24eccv,
   author  = {Hoonhee Cho* and Sung-Hoon Yoon* and Hyeokjun Kweon* and Kuk-Jin Yoon},
   title   = {Finding Meaning in Points: Weakly Supervised Semantic Segmentation for Event Cameras},
   journal = {European Conference on Computer Vision. (ECCV)},
